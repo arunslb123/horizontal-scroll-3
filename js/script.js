@@ -57,12 +57,58 @@ function focus(originalLeft) {
 // });
 
 
-$("#lft-arrow").click(function () {
-  var leftPos = $('#numWrap').scrollLeft();
-$("#numWrap").animate({scrollLeft: leftPos - 200}, 800);
-});
+// $("#lft-arrow").click(function () {
+//   var leftPos = $('#numWrap').scrollLeft();
+// $("#numWrap").stop().animate({scrollLeft: leftPos - 200}, 800);
+// });
 
-$("#rgt-arrow").click(function () {
-  var leftPos = $('#numWrap').scrollLeft();
+// $("#rgt-arrow").click(function () {
+//   var leftPos = $('#numWrap').scrollLeft();
+// $("#numWrap").stop().animate({scrollLeft: leftPos + 200}, 800);
+// });
+
+// function leftArrow(){
+//     console.log("in left")
+//     var leftPos = $('#numWrap').scrollLeft();
+// $("#numWrap").stop().animate({scrollLeft: leftPos - 200}, 800);
+// }
+
+// function rightArrow(){
+//     var leftPos = $('#numWrap').scrollLeft();
+// $("#numWrap").stop().animate({scrollLeft: leftPos + 200}, 800);
+// }
+
+
+var leftArrow=function(){
+    console.log("in left")
+    var leftPos = $('#numWrap').scrollLeft();
+$("#numWrap").animate({scrollLeft: leftPos - 200}, 800);
+}
+
+var  rightArrow=function(){
+    var leftPos = $('#numWrap').scrollLeft();
 $("#numWrap").animate({scrollLeft: leftPos + 200}, 800);
-});
+}
+
+
+
+
+// var throttledLeft = _.throttle(leftArrow, 100);
+// var throttledRight=_.throttle(rightArrow,100);
+
+
+
+// $("#lft-arrow").on('click',function () {
+//     console.log("in leftttt")
+// $("#numWrap").on('scroll',throttledLeft);
+// });
+
+// $("#rgt-arrow").on('click',function () {
+// $("#numWrap").on('scroll',throttledRight);
+// });
+
+//$(window).on('scroll', throttledHandler);
+// $("TEXTINPUT").keyup(_.throttle(function () {...}, 150));
+
+$("#lft-arrow").click(_.throttle(leftArrow,1000));
+$("#rgt-arrow").click(_.throttle(rightArrow,1000));
