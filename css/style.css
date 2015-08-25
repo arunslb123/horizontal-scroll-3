@@ -41,7 +41,7 @@ overflow: hidden;
      -ms-overflow-style: -ms-autohiding-scrollbar;
 
 }
-numWrap::-webkit-scrollbar {
+div.numWrap::-webkit-scrollbar {
     display: none;
 }
 div.strip {
