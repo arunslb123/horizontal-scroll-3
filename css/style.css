@@ -106,7 +106,7 @@ a, a:focus, a:active, a:link, a:visited {
     color: white;
     font-size: 14px;
 }
-.button: :after {
+.button::after {
     content: '';
     position: absolute;
     top: 0;
@@ -116,6 +116,7 @@ a, a:focus, a:active, a:link, a:visited {
 .button:hover {
     background: #EA804C;
 }
+
 /* Arrow Buttons */
 /* ------------- */
 .next::after,
