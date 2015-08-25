@@ -51,15 +51,15 @@ function focus(originalLeft) {
 var leftArrow=function(){
     console.log("in left")
     var leftPos = $('#numWrap').scrollLeft();
-$("#numWrap").animate({scrollLeft: leftPos - 200}, 800);
+$("#numWrap").animate({scrollLeft: leftPos - 200}, 500);
 }
 
 var  rightArrow=function(){
     var leftPos = $('#numWrap').scrollLeft();
-$("#numWrap").animate({scrollLeft: leftPos + 200}, 800);
+$("#numWrap").animate({scrollLeft: leftPos + 200}, 500);
 }
 
 
 
-$("#lft-arrow").click(_.throttle(leftArrow,1200));
-$("#rgt-arrow").click(_.throttle(rightArrow,1200));
+$("#lft-arrow").click(_.throttle(leftArrow,800));
+$("#rgt-arrow").click(_.throttle(rightArrow,800));
