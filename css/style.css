@@ -117,33 +117,28 @@ a, a:focus, a:active, a:link, a:visited {
     background: #EA804C;
 }
 /* Arrow Buttons */
-
 /* ------------- */
-
-.next: :after, .prev: :after {
-    border-style: solid;
+.next::after,
+.prev::after {
+  border-style: solid;
 }
 /* Next Button */
-
 /* ----------- */
-
-.next: :after {
-    right: -26px;
-    border-width: 13px;
-    border-color: transparent transparent transparent #F55000;
+.next::after {
+  right: -26px;
+  border-width: 13px;
+  border-color: transparent transparent transparent #F55000;
 }
-.next:hover: :after {
-    border-left-color: #EA804C;
+.next:hover::after {
+  border-left-color: #EA804C;
 }
 /* Prev Button */
-
 /* ----------- */
-
-.prev: :after {
-    left: -26px;
-    border-color: transparent #F55000 transparent transparent;
-    border-width: 13px;
+.prev::after {
+  left: -26px;
+  border-color: transparent #F55000 transparent transparent;
+  border-width: 13px;
 }
-.prev:hover: :after {
-    border-right-color: #EA804C;
+.prev:hover::after {
+  border-right-color: #EA804C;
 }
